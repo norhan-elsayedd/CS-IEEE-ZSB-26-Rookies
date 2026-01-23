@@ -5,9 +5,7 @@ using namespace std;
 
 //Comparing Strings
 
-int main(){
-    int a, b;
-    cin>>a>>b;
+string comparestrings(int a, int b){
     string sa=to_string(a);
     string sb=to_string(b);
 
@@ -19,5 +17,12 @@ int main(){
     for(int i=0;i<a;i++)
     s2+=sb;
 
-    cout<<min(s1,s2);
+    return min(s1,s2);
+}
+
+int main(){
+    int a, b;
+    cin>>a>>b;
+    string result=comparestrings(a,b);
+    cout<<result;
 }
